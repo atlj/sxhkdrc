@@ -8,7 +8,9 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -modi drun -show
+	rofi -modi drun -show drun -line-padding 4 \
+            -columns 2 -padding 50 -hide-scrollbar -terminal alacritty \
+            -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -20,19 +22,7 @@ super + Escape
 
 # powermenu
 super + x
-	sh power-menu.sh
-
-# emoji
-super + v
-	sh rofi-emoji.sh
-
-# eww open
-super + z
-	eww open-many shutdown reboot quit volume player profile date 
-
-# eww kill
-super + alt + z
-	sh eww_close.sh
+    ~/.config/rofi/powermenu.sh
 
 #code
 super + c
