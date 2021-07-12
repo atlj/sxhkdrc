@@ -21,6 +21,26 @@ super + x
     ~/.config/rofi/powermenu.sh
 
 #
+## Screenshot
+#
+
+# take an area's screenshot and copy it to clipboard
+super + shift + s
+	maim -s | xclip -selection clipboard -t image/png
+
+#take an area's screenshot than save it to ~/Resimler
+super + shift + ctrl + s
+	maim -s ~/Resimler/$(date +%s).png
+
+# take a window's screenshot and copy it to clipboard
+super + alt + s
+	maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+
+#take a window's screenshot and save it to ~/Resimler
+super + alt + ctrl + s
+	maim -i $(xdotool getactivewindow) ~/Resimler/$(date +%s).png
+
+#
 ## Program Hotkeys
 #
 
