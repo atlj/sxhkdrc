@@ -16,13 +16,13 @@ super + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#
-# bspwm hotkeys
-#
-
 # powermenu
 super + x
     ~/.config/rofi/powermenu.sh
+
+#
+## Program Hotkeys
+#
 
 #code
 super + c
@@ -39,6 +39,14 @@ super + b
 #telegram
 super + <
 	telegram-desktop
+
+# Color picker
+super + v
+	gpicker
+
+#
+# bspwm hotkeys
+#
 
 # quit/restart bspwm
 super + alt + {q,r}
@@ -98,7 +106,7 @@ super + {grave,Tab}
 
 # focus the older or newer node in the focus history
 super + {o,i}
-	bspc wm -h off; \
+	bspc wm -h off; \ 
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
@@ -129,6 +137,10 @@ super + ctrl + shift + space
 #
 # move/resize
 #
+
+# Move current window to a pre-selected space
+super + shift + m
+    bspc node -n last.!automatic
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
