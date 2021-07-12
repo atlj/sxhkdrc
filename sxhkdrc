@@ -36,6 +36,10 @@ super + d
 super + b
 	google-chrome
 
+#vi file manager
+super + e
+	alacritty -e vifm
+
 #telegram
 super + <
 	telegram-desktop
